@@ -7,10 +7,6 @@ const helmet = require("helmet");
 
 dotenv.config();
 
-app.listen(8800, () => {
-  console.log(`Server running on 8800`);
-});
-
 // connect to mongodb via mongoose
 mongoose.connect(
   process.env.DATABASE_URL,
@@ -23,3 +19,13 @@ mongoose.connect(
     }
   }
 );
+
+// middleware
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
+
+// Server connection
+app.listen(8800, () => {
+  console.log(`Server running on 8800`);
+});
