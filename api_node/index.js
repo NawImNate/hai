@@ -12,10 +12,14 @@ app.listen(8800, () => {
 });
 
 // connect to mongodb via mongoose
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true }, () => {
-  try {
-    console.log("Connected to Hai DB.");
-  } catch (error) {
-    console.log(error.message);
+mongoose.connect(
+  process.env.DATABASE_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    try {
+      console.log("Connected to Hai DB.");
+    } catch (error) {
+      console.log(error.message);
+    }
   }
-});
+);
