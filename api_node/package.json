@@ -4,7 +4,7 @@
   "description": "A single page application - social media app, inspired by some friends. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "Jared Nathan Hatchell",
   "license": "ISC",
