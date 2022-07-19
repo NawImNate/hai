@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const helmet = require("helmet");
+const userRoute = require("./routes/user");
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ mongoose.connect(
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+
+app.use("api/user", userRoute);
 
 // Server connection
 app.listen(8800, () => {
