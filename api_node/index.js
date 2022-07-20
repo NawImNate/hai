@@ -26,7 +26,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use("api/user", userRoute);
+//URI for user route
+app.use("/api/user", userRoute);
 
 // Server connection
 app.listen(8800, () => {
