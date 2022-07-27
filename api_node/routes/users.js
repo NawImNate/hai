@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 // update users
 router.put("/:id", async (req, res) => {
+  // verify if user id matches with id being requested
   if (req.body._id === req.params.id || req.body.isAdmin) {
     if (req.body.password) {
       try {
@@ -13,6 +14,7 @@ router.put("/:id", async (req, res) => {
         return res.status(500).json(err);
       }
     }
+    // if this is the proper id associated then update account
     try {
       const user = await User.findByIdAndUpdate(req.body._id, {
         $set: req.body,
@@ -21,6 +23,7 @@ router.put("/:id", async (req, res) => {
     } catch (err) {
       return res.status(500).json(err);
     }
+    // else state that you can only update your account
   } else {
     return res.status(403).json("You can only update your account.");
   }
