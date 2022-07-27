@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const helmet = require("helmet");
-const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const usersRoute = require("./routes/users");
 
 dotenv.config();
 
@@ -28,8 +28,8 @@ app.use(helmet());
 app.use(morgan("common"));
 
 //URI for user route
-app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/users", usersRoute);
 
 // Server connection
 app.listen(8800, () => {
