@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { findByIdAndUpdate } = require("../models/Post");
 const Post = require("../models/Post");
 
 // create a post
@@ -50,6 +51,25 @@ router.delete("/:id", async (req, res) => {
   }
 });
 // like a post
+router.put("/:id/like", async (req, res) => {
+  try {
+    // model to find post by params.id, other words: verify specific post
+    const post = await Post.findById(req.params.id);
+    // if the post doesnt include the userID
+    if (!post.likes.includes(req.body.userID)) {
+      // if it doesnt contain a userID for likes, then update it to have the req.body.userID to be part of its array for users that liked the post.
+      await post.updateOne({ $push: { likes: req.body.userID } });
+      // notifying req success
+      res.status(200).json("liked the post");
+    } else {
+      // otherwise dislike the post. if the like post's if statement doesnt go through at all it will throw the 500 error outside of this "if + try block" anyway. The outcome with either be like or dislike. period. so if it is never initiatied there will never be a dislike but if it is initiated then there will be a like, if initiated again, there will be a dislike due to there already having a userID in the likes array. then this line will execute.
+      await post.updateOne({ $pull: { likes: req.body.userID } });
+      res.status(200).json("disliked the post");
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // get a post
 // get all posts
 module.exports = router;
