@@ -20,8 +20,8 @@ router.put("/:id", async (req, res) => {
     const post = await Post.findById(req.params.id);
 
     if (post.userId === req.body.id) {
-      // destructure the object and make it
-      // const { userID, ...other } = user._doc;
+      // destructure the object and make it exclude the users id for updatingone ? ? ?
+      // the post will update but unfortunately the userID can also be manipulated in the database, pull ticket for improvement later
       await post.updateOne({ $set: req.body });
       res.status(200).json("post updated");
       res.status(200).json(other);
