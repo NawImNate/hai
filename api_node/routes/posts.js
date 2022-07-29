@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { findByIdAndUpdate } = require("../models/Post");
 const Post = require("../models/Post");
+const User = require("../models/User");
 
 // create a post
 router.post("/", async (req, res) => {
@@ -50,7 +50,7 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-// like a post
+// like/dislike a post
 router.put("/:id/like", async (req, res) => {
   try {
     // model to find post by params.id, other words: verify specific post
@@ -71,5 +71,32 @@ router.put("/:id/like", async (req, res) => {
   }
 });
 // get a post
-// get all posts
+router.get("/:id", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.status(200).json(post);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// get all timeline posts
+router.get("/timeline/all", async (req, res) => {
+  try {
+    // current user needs to be found in the User table via model, finding the current user's id being the _id
+    const currentUser = await User.findById(req.body._id);
+    // find all posts of user.
+    const userPosts = await Post.find({ userID: currentUser._id });
+    // find all posts of currentUsers following array
+    const friendPosts = await Promise.all(
+      currentUser.following.map((friendId) => {
+        // return the posts that show _id being synonamous with that users id.
+        return Post.find({ _id: friendId });
+      })
+    );
+    res.json(userPosts.concat(...friendPosts));
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
