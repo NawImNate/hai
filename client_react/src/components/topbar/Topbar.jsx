@@ -12,7 +12,7 @@ const topbar = () => {
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
-          <SearchIcon />
+          <SearchIcon className="searchIcon" />
           <input
             placeholder="Search for friends, posts, or video"
             className="searchInput"
@@ -38,6 +38,11 @@ const topbar = () => {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
+        <img
+          src="/assets/person/stud.jpg"
+          alt="nate pic"
+          className="topbarImg"
+        />
       </div>
     </div>
   );
