@@ -1,7 +1,7 @@
 import "./feed.css";
 
 const Feed = () => {
-  return <div>Feed</div>;
+  return <div className="feed">Feed</div>;
 };
 
 export default Feed;

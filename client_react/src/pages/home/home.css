@@ -2,3 +2,8 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+.homeContainer {
+  display: flex;
+  width: 100%;
+}
