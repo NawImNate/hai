@@ -20,8 +20,24 @@ const Post = () => {
             <MoreVertIcon />
           </div>
         </div>
-        <div className="postCenter"></div>
-        <div className="postBottom"></div>
+        <div className="postCenter">
+          <span className="postText">A picture for my first post</span>
+          <img src="assets/dbz2.jpg" alt="DBZ pic" className="postImg" />
+        </div>
+        <div className="postBottom">
+          <div className="postBottomLeft">
+            <img className="likeIcon" src="assets/like.png" alt="like a post" />
+            <img
+              className="likeIcon"
+              src="assets/heart.png"
+              alt="heart a post"
+            />
+            <span className="postLikeCounter">32 others like this</span>
+          </div>
+          <div className="postBottomRight">
+            <span className="postCommentText">9 comments</span>
+          </div>
+        </div>
       </div>
     </div>
   );
