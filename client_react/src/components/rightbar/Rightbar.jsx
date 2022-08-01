@@ -10,10 +10,47 @@ const Rightbar = () => {
             src="assets/gift.png"
             alt="birthday icon"
           />
-          <div className="birthdayText">
+          <span className="birthdayText">
             <b>Zach Everett</b> and <b>2 other friends</b> have birthday's today
-          </div>
+          </span>
         </div>
+        <img className="rightbarAd" src="assets/ad.jpg" alt="pickleball ad" />
+        <h4 className="rightbarTitle">Friends Online</h4>
+        <ul className="rightbarFriendList">
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                className="rightbarProfileImg"
+                src="assets/person/zach.jpg"
+                alt="zach pic"
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Zach Everett</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                className="rightbarProfileImg"
+                src="assets/person/zach.jpg"
+                alt="zach pic"
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Zach Everett</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img
+                className="rightbarProfileImg"
+                src="assets/person/zach.jpg"
+                alt="zach pic"
+              />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Zach Everett</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
