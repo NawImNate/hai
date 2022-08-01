@@ -7,6 +7,14 @@
 ::-webkit-scrollbar {
   width: 5px;
 }
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: rgb(233, 231, 231);
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: rgb(201, 201, 201);
+}
 
 .sidebarWrapper {
   padding: 20px;
