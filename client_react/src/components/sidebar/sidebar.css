@@ -4,6 +4,10 @@
   overflow-y: scroll;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 .sidebarWrapper {
   padding: 20px;
   background-color: rgb(219, 218, 218);
