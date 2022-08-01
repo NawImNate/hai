@@ -42,7 +42,12 @@
   border: none;
   padding: 10px;
   border-radius: 5px;
-  font-weight: 500;
+}
+
+.sidebarButton:hover {
+  cursor: pointer;
+  background-color: rgba(89, 117, 243, 0.336);
+  color: rgb(242, 242, 242);
 }
 
 .sidebarHr {
