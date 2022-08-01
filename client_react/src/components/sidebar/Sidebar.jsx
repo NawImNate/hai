@@ -51,6 +51,50 @@ const Sidebar = () => {
             <span className="sidebarListItemText">Courses</span>
           </li>
         </ul>
+        <button className="sidebarButton">Show More</button>
+        <hr className="sidebarHr"></hr>
+        <ul className="sidebarFriendList">
+          <li className="sidebarFriend">
+            <img
+              src="assets/person/zach.jpg"
+              alt="zach pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Zachari Everett</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="assets/person/zach.jpg"
+              alt="zach pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Zahck Everett</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="assets/person/zach.jpg"
+              alt="zach pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Zack Everett</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="assets/person/zach.jpg"
+              alt="zach pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Zach Everett</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="assets/person/zach.jpg"
+              alt="zach pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Zac Everett</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
