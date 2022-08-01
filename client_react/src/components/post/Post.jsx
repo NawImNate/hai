@@ -22,7 +22,7 @@ const Post = () => {
         </div>
         <div className="postCenter">
           <span className="postText">A picture for my first post</span>
-          <img src="assets/dbz2.jpg" alt="DBZ pic" className="postImg" />
+          <img src="assets/tokyo.jpg" alt="tokyo pic" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
