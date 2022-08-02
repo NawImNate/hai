@@ -3,8 +3,6 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Users } from "../../dummyData";
 
 const Post = ({ post }) => {
-  const user = Users.filter((u) => u.id === 1);
-  console.log(user);
   return (
     <div className="post">
       <div className="postWrapper">
@@ -12,10 +10,12 @@ const Post = ({ post }) => {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src="/assets/person/stud.jpg"
+              src={Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               alt="nate pic"
             ></img>
-            <span className="postUsername">Nathan Hatchell</span>
+            <span className="postUsername">
+              {Users.filter((u) => u.id === post.userId)[0].username}
+            </span>
             <span className="postDate">{post.date} </span>
           </div>
           <div className="postTopRight">
