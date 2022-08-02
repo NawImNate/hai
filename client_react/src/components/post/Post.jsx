@@ -1,8 +1,10 @@
 import "./post.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Users } from "../../dummyData";
 
 const Post = ({ post }) => {
-  console.log(post);
+  const user = Users.filter((u) => u.id === 1);
+  console.log(user);
   return (
     <div className="post">
       <div className="postWrapper">
@@ -22,7 +24,7 @@ const Post = ({ post }) => {
         </div>
         <div className="postCenter">
           <span className="postText">{post.desc} </span>
-          <img src="assets/tokyo.jpg" alt="tokyo pic" className="postImg" />
+          <img src={post.photo} alt="tokyo pic" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
