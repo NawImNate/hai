@@ -62,38 +62,6 @@ const Sidebar = () => {
             />
             <span className="sidebarFriendName">Zachari Everett</span>
           </li>
-          <li className="sidebarFriend">
-            <img
-              src="assets/person/zach.jpg"
-              alt="zach pic"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Zahck Everett</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src="assets/person/zach.jpg"
-              alt="zach pic"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Zack Everett</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src="assets/person/zach.jpg"
-              alt="zach pic"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Zach Everett</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src="assets/person/zach.jpg"
-              alt="zach pic"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Zac Everett</span>
-          </li>
         </ul>
       </div>
     </div>
