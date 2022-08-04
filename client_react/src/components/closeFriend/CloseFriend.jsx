@@ -1,14 +1,14 @@
 import "./closefriend.css";
 
-function CloseFriend() {
+function CloseFriend({ user }) {
   return (
     <li className="sidebarFriend">
       <img
-        src="assets/person/zach.jpg"
+        src={user.profilePicture}
         alt="zach pic"
         className="sidebarFriendImg"
       />
-      <span className="sidebarFriendName">Zach Everett</span>
+      <span className="sidebarFriendName">{user.username}</span>
     </li>
   );
 }
