@@ -8,6 +8,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EventIcon from "@mui/icons-material/Event";
 import SchoolIcon from "@mui/icons-material/School";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 const Sidebar = () => {
   return (
@@ -54,14 +55,7 @@ const Sidebar = () => {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr"></hr>
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img
-              src="assets/person/zach.jpg"
-              alt="zach pic"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Zachari Everett</span>
-          </li>
+          <CloseFriend />
         </ul>
       </div>
     </div>
